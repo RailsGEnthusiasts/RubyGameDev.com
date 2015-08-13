@@ -30,3 +30,16 @@ $(function(){
         alert('Failed.');
     });
 })
+
+$(function(){
+  console.log($('.vote-link'))
+
+  $('.vote-link').click(function(event){
+    event.preventDefault();
+    var link = $(this);
+    var num = link.find('.num').text();
+    
+    var newNum = parseInt(num) + 1;
+    link.find('.num').text(newNum);
+  });
+});

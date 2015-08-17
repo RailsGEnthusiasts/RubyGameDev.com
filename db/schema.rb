@@ -143,7 +143,7 @@ ActiveRecord::Schema.define(version: 20150804093147) do
   add_index "users", ["email"], name: "index_users_on_email"
   add_index "users", ["remember_token"], name: "index_users_on_remember_token"
 
-  create_table "votes", id: false, force: true do |t|
+  create_table "votes", force: true do |t|
     t.integer "post_id"
     t.integer "user_id"
   end

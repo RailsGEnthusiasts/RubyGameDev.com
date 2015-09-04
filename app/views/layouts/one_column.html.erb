@@ -33,17 +33,19 @@
             <%= image_tag 'rubygamedev_logo.png', alt: 'RubyGameDev.com', width: 225, class: 'visible-xs', style: 'margin-top: 8px;' %>
           </a>
         </div>
-        
-        <div class="nav navbar-nav">
-          <div class="guide-nav">
-            <%= image_tag 'Guide.png', alt: 'Guides', class: 'guide-xs' %>
-            <%= link_to 'Guides', guides_path, class: 'text' %>
-          </div>
-        </div>
+
+        <!-- <div class="nav navbar-nav">
+
+        </div> -->
 
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right pull-right">
-
+            <li>
+              <div class="guide-nav">
+                <%= image_tag 'Guide.png', alt: 'Guides', class: 'guide-xs' %>
+                <%= link_to 'Guides', guides_path, class: 'text' %>
+              </div>
+            </li>
             <li class="search">
               <%= form_tag(posts_path, :method => "get", id: "search-form") do %>
               <%= text_field_tag :search, params[:search], {placeholder: "Search", class: 'glowing-border'} %>

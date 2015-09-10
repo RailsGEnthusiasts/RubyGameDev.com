@@ -30,6 +30,7 @@ $(function(){
     .bind("ajax:error", function(xhr, status, error) {
         alert('Failed.');
     });
+})
 
 });
 
@@ -63,4 +64,21 @@ $(function() {
     // remove any trailing commas
     this.value = this.value.replace(/,\s*$/, '');
   });
+});
+
+$(function(){
+  $(".vote-count a").on('click', function(){
+    var url = $(this).attr('href') + ".json";
+    $.ajax({
+      url: url,
+      type: "PUT",
+      data: {increment: true},
+
+      success: function(response){
+        alert(response);
+      }
+    });
+    return false;
+  });
+
 });

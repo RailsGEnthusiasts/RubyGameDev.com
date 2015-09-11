@@ -30,8 +30,6 @@ $(function(){
     .bind("ajax:error", function(xhr, status, error) {
         alert('Failed.');
     });
-})
-
 });
 
 $(function() {
@@ -66,19 +64,23 @@ $(function() {
   });
 });
 
-$(function(){
-  $(".vote-count a").on('click', function(){
-    var url = $(this).attr('href') + ".json";
+$(function() {
+  $(".vote-count a").on('click', function() {
+    var link = $(this);
+    var url = $(this).attr('href');
+
     $.ajax({
       url: url,
       type: "PUT",
       data: {increment: true},
 
-      success: function(response){
-        alert(response);
+      success: function(response) {
+        link.replaceWith(response);
       }
     });
+
     return false;
   });
+});
 
 });

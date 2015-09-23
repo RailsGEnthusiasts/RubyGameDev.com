@@ -72,7 +72,6 @@ $(function() {
     $.ajax({
       url: url,
       type: "PUT",
-      data: {increment: true},
 
       success: function(response) {
         link.replaceWith(response);
@@ -81,6 +80,4 @@ $(function() {
 
     return false;
   });
-});
-
 });

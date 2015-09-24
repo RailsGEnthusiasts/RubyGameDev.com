@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150901091817) do
+ActiveRecord::Schema.define(version: 20150924110359) do
 
   create_table "authentications", force: true do |t|
     t.integer  "user_id"
@@ -74,6 +74,17 @@ ActiveRecord::Schema.define(version: 20150901091817) do
     t.datetime "updated_at"
   end
 
+  create_table "guide_revisions", force: true do |t|
+    t.integer  "original_guide_id"
+    t.string   "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "title"
+    t.text     "body_markdown"
+    t.integer  "guide_category_id"
+    t.integer  "user_id"
+  end
+
   create_table "libraries", force: true do |t|
     t.string   "name"
     t.text     "description"
@@ -110,6 +121,20 @@ ActiveRecord::Schema.define(version: 20150901091817) do
   create_table "posts_tags", id: false, force: true do |t|
     t.integer "post_id"
     t.integer "tag_id"
+  end
+
+  create_table "showcases", force: true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.string   "screenshot"
+    t.string   "project_website_url"
+    t.string   "GH_repo_url"
+    t.string   "app_store_url"
+    t.string   "google_play_url"
+    t.integer  "user_id"
+    t.integer  "showcase_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "tags", force: true do |t|

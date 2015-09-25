@@ -1,0 +1,16 @@
+<h1>
+  Game Projects
+  <%= link_to "Share Your Game", new_showcase_path, class: 'btn btn-sm btn-primary pull-right'%>
+</h1>
+
+<table class="showcase table">
+  <tbody>
+    <% @showcases.each do |game| %>
+      <tr>
+        <td>
+          <%= link_to game.title, game %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

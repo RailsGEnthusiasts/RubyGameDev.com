@@ -1,0 +1,49 @@
+<h1>Showcase section</h1>
+
+<%= form_for(@showcase) do |f| %>
+  <% if @showcase.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@showcase.errors.count, "error") %> prohibited this showcase from being saved:</h2>
+
+      <ul>
+        <% @showcase.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :title, 'Title*' %>
+    <%= f.text_field :title, class: 'form-control input-lg' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :description, 'Description*' %>
+    <%= f.text_area :description, class: 'form-control', rows: 5 %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :project_website_url, 'Project Website*' %>
+    <%= f.text_field :project_website_url, class: 'form-control', placeholder: 'www.rubygames.com' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :gh_repo_url, 'GitHub*' %>
+    <%= f.text_field :gh_repo_url, class: 'form-control', placeholder: 'https://github.com/' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :app_store_url, 'App Store' %>
+    <%= f.text_field :app_store_url, class: 'form-control', placeholder: 'https://itunes.apple.com/apple-store/' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :google_play_url, 'Google Play' %>
+    <%= f.text_field :google_play_url, class: 'form-control', placeholder: 'https://play.google.com/store/' %>
+  </div>
+
+  <%= f.submit nil, class: 'btn btn-default' %><br>
+
+  <span class="asterisk">* Fields marked with asterisk are compulsory.</span>
+<% end %>

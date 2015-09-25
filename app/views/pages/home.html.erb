@@ -64,5 +64,23 @@
       </div>
     </div>
 
+    <div class="panel panel-default">
+      <div class="panel-body text-center">
+        <h3><%= link_to 'Random Showcase Name', showcase_path(@showcase) %></h3>
+        <%= link_to image_tag('joybox_asteroids_game.png', alt: 'The random showcase name', width: 150, height: 100), showcase_path(@showcase) %><br>
+        <p>
+          Bla, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla
+          <%= link_to '...read more', showcase_path(@showcase) %>
+        </p>
+        <%= link_to "Share Your Game", new_showcase_path, class: 'btn btn-sm btn-primary'%>
+        <%= link_to "View All Games", showcases_path, class: 'btn btn-sm btn-primary'%>
+        <div class="web-icons">
+          <%= link_to image_tag('GitHub-Mark-32px.png', alt: 'GitHub'), 'https://github.com', :target => '_blank'%>
+          <%= link_to image_tag('appstore_logo.jpeg', alt: 'App Store', width: 32, height: 32), 'http://www.apple.com/itunes/charts/', :target => '_blank' %>
+          <%= link_to image_tag('google_play.png', alt: 'Google Play', height: 32), 'https://play.google.com/store', :target => '_blank' %>
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>

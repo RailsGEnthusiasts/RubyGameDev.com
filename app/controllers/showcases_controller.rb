@@ -70,19 +70,19 @@ class ShowcasesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_showcase
-      @showcase = showcase.find(params[:showcase_id])
+      @showcase = Showcase.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def showcase_params
       params.require(:showcase).permit(
-        :showcase_id,
         :title,
         :description,
+        :screenshot,
         :user_id,
         :project_website_url,
-        :GH_repo_url,
+        :gh_repo_url,
         :app_store_url,
-        :google_play_url
+        :google_play_url)
     end
 end

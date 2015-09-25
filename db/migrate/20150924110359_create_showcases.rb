@@ -5,11 +5,10 @@ class CreateShowcases < ActiveRecord::Migration
       t.text :description
       t.string :screenshot
       t.string :project_website_url
-      t.string :GH_repo_url
+      t.string :gh_repo_url
       t.string :app_store_url
       t.string :google_play_url
       t.integer :user_id
-      t.integer :showcase_id
 
       t.timestamps
     end

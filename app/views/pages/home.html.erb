@@ -68,7 +68,7 @@
         <div class="panel-body text-center">
           <% if @showcase.present? %>
             <h3><%= link_to @showcase.title, showcase_path(@showcase) %></h3>
-            <%= link_to image_tag('joybox_asteroids_game.png', alt: 'The random showcase name', width: 150, height: 100), showcase_path(@showcase) %><br>
+            <%= image_tag attachment_url(@showcase, :screenshot, :fill, 150, 100, format: "jpg") %>
 
             <div class="show-description">
               <p><%= truncate @showcase.description, length: 250 %>

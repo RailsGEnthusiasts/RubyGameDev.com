@@ -23,5 +23,13 @@
     <%= f.text_area :description, class: 'form-control', rows: 5 %>
   </div>
 
-    <%= f.submit nil, class: 'btn btn-default' %>
+  <%= image_tag attachment_url(@showcase, :screenshot, :fill, 150, 150) %>
+  <div class="form-group">
+    <%= f.check_box :remove_screenshot %>
+    <%= f.label :remove_screenshot %>
+    <%= f.attachment_field :screenshot %>
+  </div>
+
+
+  <%= f.submit nil, class: 'btn btn-default' %>
 <% end %>

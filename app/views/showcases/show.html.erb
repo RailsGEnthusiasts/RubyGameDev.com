@@ -11,6 +11,6 @@
   <% end %>
 </p>
 
-<%= image_tag attachment_url(@showcase, :screenshot, :fill, 300, 300, format: "jpg") %>
+<%= image_tag attachment_url(@showcase, :screenshot, :fill, 300, 300, format: "jpg"), class: "img-showcase pull-right" %>
 
 <div><%= @showcase.description %></div>

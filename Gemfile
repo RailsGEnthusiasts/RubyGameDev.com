@@ -59,6 +59,10 @@ gem 'ruby-stackoverflow', git: 'https://github.com/PowerCodeGirls/ruby-stackover
 gem 'sidekiq'
 gem "sidekiq-cron", "~> 0.3.0"
 
+# uploading images
+gem "refile", require: "refile/rails"
+gem "refile-mini_magick"
+
 group :test do
   gem 'rspec-rails'
   gem 'shoulda-matchers'

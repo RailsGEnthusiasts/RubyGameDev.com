@@ -66,12 +66,14 @@
 
     <div class="panel panel-default">
       <div class="panel-body text-center">
-        <h3><%= link_to 'Random Showcase Name', showcase_path(@showcase) %></h3>
+        <h3><%= link_to @showcase.title, showcase_path(@showcase) %></h3>
         <%= link_to image_tag('joybox_asteroids_game.png', alt: 'The random showcase name', width: 150, height: 100), showcase_path(@showcase) %><br>
-        <p>
-          Bla, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla
-          <%= link_to '...read more', showcase_path(@showcase) %>
-        </p>
+
+        <div class="show-description">
+          <p><%= truncate @showcase.description, length: 250 %>
+          <%= link_to 'read more', showcase_path(@showcase) %></p>
+        </div>
+
         <%= link_to "Share Your Game", new_showcase_path, class: 'btn btn-sm btn-primary'%>
         <%= link_to "View All Games", showcases_path, class: 'btn btn-sm btn-primary'%>
         <div class="web-icons">

@@ -32,7 +32,7 @@ class ShowcasesController < ApplicationController
 
     respond_to do |format|
       if @showcase.save
-        format.html { redirect_to showcases_path(@showcase), notice: 'Showcase was successfully created.' }
+        format.html { redirect_to showcase_path(@showcase), notice: 'Showcase was successfully created.' }
         format.json { render action: 'show', status: :created, location: showcase_path(@showcase) }
       else
         format.html { render action: 'new' }
@@ -47,7 +47,7 @@ class ShowcasesController < ApplicationController
     authorize @showcase
     respond_to do |format|
       if @showcase.update(showcase_params)
-        format.html { redirect_to showcases_path(@showcase), notice: 'Showcase was successfully updated.' }
+        format.html { redirect_to showcase_path(@showcase), notice: 'Showcase was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }

@@ -1,0 +1,14 @@
+<h1>
+  <%= @showcase.title %>
+  <%= link_to 'All Games', showcases_path, class: 'btn btn-primary pull-right' %>
+</h1>
+
+<p>
+  Posted by: <%= @showcase.username %> on <%= @showcase.created_at.strftime("%m/%d/%Y") %>
+
+  <% if policy(@showcase).update? %>
+      | <%= link_to 'Edit', edit_showcase_path(@showcase) %>
+  <% end %>
+</p>
+
+<div><%= @showcase.description %></div>

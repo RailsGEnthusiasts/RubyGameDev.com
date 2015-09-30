@@ -43,6 +43,11 @@
     <%= f.text_field :google_play_url, class: 'form-control', placeholder: 'https://play.google.com/store/' %>
   </div>
 
+  <div class="form-group">
+    <%= f.label :screenshot, 'Upload Screenshot' %>
+    <%= f.attachment_field :screenshot %>
+  </div>
+
   <%= f.submit nil, class: 'btn btn-default' %><br>
 
   <span class="asterisk">* Fields marked with asterisk are compulsory.</span>

@@ -1,4 +1,6 @@
 class Showcase < ActiveRecord::Base
+  attachment :screenshot
+
   belongs_to :user
   validates :user, :title, :description, :project_website_url, presence: true
 

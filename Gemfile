@@ -60,8 +60,8 @@ gem 'sidekiq'
 gem "sidekiq-cron", "~> 0.3.0"
 
 # uploading images
-gem "refile", require: "refile/rails"
-gem "refile-mini_magick"
+gem 'refile', require: 'refile/rails', github: 'refile/refile'
+gem 'refile-mini_magick', github: 'refile/refile-mini_magick'
 
 group :test do
   gem 'rspec-rails'

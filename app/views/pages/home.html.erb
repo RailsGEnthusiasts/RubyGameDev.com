@@ -80,9 +80,15 @@
         <%= link_to "View All Games", showcases_path, class: 'btn btn-sm btn-primary'%>
 
         <div class="web-icons">
-          <%= link_to image_tag('GitHub-Mark-32px.png', alt: 'GitHub'), @showcase.gh_repo_url, :target => '_blank'%>
-          <%= link_to image_tag('appstore_logo.jpeg', alt: 'App Store', width: 32, height: 32), @showcase.app_store_url, :target => '_blank' %>
-          <%= link_to image_tag('google_play.png', alt: 'Google Play', height: 32), @showcase.google_play_url, :target => '_blank' %>
+          <% if @showcase.gh_repo_url.present? %>
+            <%= link_to image_tag('GitHub-Mark-32px.png', alt: 'GitHub'), @showcase.gh_repo_url, :target => '_blank'%>
+          <% end %>
+          <% if @showcase.app_store_url.present? %>
+            <%= link_to image_tag('appstore_logo.jpeg', alt: 'App Store', width: 32, height: 32), @showcase.app_store_url, :target => '_blank' %>
+          <% end %>
+          <% if @showcase.google_play_url.present? %>
+            <%= link_to image_tag('google_play.png', alt: 'Google Play', height: 32), @showcase.google_play_url, :target => '_blank' %>
+          <%end %>
         </div>
       </div>
     </div>

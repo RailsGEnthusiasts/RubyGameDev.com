@@ -1,9 +1,5 @@
 class Showcase < ActiveRecord::Base
-  # extend Refile::Attachment
-  #   attr_accessor :screenshot
-
-    attachment :screenshot
-    attachment :resume, extension: ["jpg", "jpeg", "png"]
+  attachment :screenshot, extension: ["jpg", "jpeg", "png", "bmp"]
 
   belongs_to :user
   validates :user, :title, :description, :project_website_url, presence: true

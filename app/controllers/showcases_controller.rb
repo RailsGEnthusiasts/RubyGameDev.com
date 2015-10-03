@@ -79,6 +79,7 @@ class ShowcasesController < ApplicationController
         :title,
         :description,
         :screenshot,
+        :remove_screenshot,
         :user_id,
         :project_website_url,
         :gh_repo_url,

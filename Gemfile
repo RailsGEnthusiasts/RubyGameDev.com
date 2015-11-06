@@ -58,6 +58,8 @@ gem 'ruby-stackoverflow', git: 'https://github.com/PowerCodeGirls/ruby-stackover
 
 gem 'sidekiq'
 gem "sidekiq-cron", "~> 0.3.0"
+gem 'rails-i18n', '~> 4.0.0'
+gem 'sinatra', :require => nil
 
 # uploading images
 gem 'refile', require: 'refile/rails', github: 'refile/refile'
